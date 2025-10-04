@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição - Gold Academia</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-interna">
+  <!-- ===== NAVBAR SUPERIOR ===== -->
+  <div class="navbar">
+    <!-- Logo -->
+    <a href="../index.html">
+      <img src="../assets/logo.png" id="logo" alt="Logo Gold Academia">
+    </a>
+
+    <!-- Menu -->
+    <nav class="main-nav">
+      <a href="../index.html#inicio">Início</a>
+      <a href="../index.html#dietas">Dietas</a>
+      <a href="../index.html#treinos">Treinos</a>
+      <a href="../index.html#professores">Professores</a>
+      <a href="../index.html#contato">Contato</a>
+    </nav>
+
+    <!-- Botão -->
+    <a href="formulario.html" class="btn-matricule">Matricule-se</a>
+  </div>
+
+  <!-- ===== FORMULÁRIO ===== -->
+  <main>
+    <section id="formulario">
+      <div class="form-container">
+        <h1 id="titulo_formulario">
+            Faça sua matricula<br>
+            <span class="linha2">agora mesmo</span>
+        </h1>
+        <form 
+          action="https://api.sheetmonkey.io/form/bvgzUFz5YNNUo4GB7yhvJm" 
+          method="post">
+          
+          <input type="text" placeholder="Nome" name="Name" required>
+          <input type="email" placeholder="E-mail" name="Email" required>
+          <input type="tel" placeholder="Telefone" name="Phone" required>
+          
+          <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/index.js"></script>
+</body>
+</html>

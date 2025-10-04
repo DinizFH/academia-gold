@@ -1,0 +1,460 @@
+@font-face {
+  font-family: 'Eaglesport';
+  src: url('../assets/fonts/Sports-World-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+
+.hero h1 {
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: #d3f800; /* fallback */
+  color: lab(84.02% -14.21 83.84); /* cor dinâmica */
+  margin: 1rem 0;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* ===== NAVBAR SUPERIOR ===== */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.4rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: transparent;
+}
+
+#logo {
+  width: 230px;
+  margin: 0;
+}
+
+/* ===== MENU DE NAVEGAÇÃO ===== */
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  background: #d3f800; /* fallback */
+  background: lab(84.02% -14.21 83.84); /* cor dinâmica */
+  color: #000;
+  padding: 0.8rem 1.4rem;
+  border-radius: 22px;
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-nav a:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.btn-matricule {
+  background: #d3f800; /* fallback */
+  background: lab(84.02% -14.21 83.84); /* cor dinâmica */
+  color: #000;
+  padding: 0.8rem 1.4rem;
+  border-radius: 22px;
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-matricule:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  padding: 4rem 2rem;
+  background: #000;
+}
+
+.sobre .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#tx-sobre {
+  flex: 1;
+  min-width: 300px;
+}
+
+#tx-sobre h2 {
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  color: #d3f800; /* fallback */
+  color: lab(84.02% -14.21 83.84); /* cor dinâmica */
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+#tx-sobre p {
+  font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+  color: #fff;
+}
+
+#video_sobre {
+  flex: 1.2;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+#video_sobre iframe {
+  width: 100%;
+  max-width: 480px;   /* bom p/ vídeos verticais */
+  height: 680px;      /* altura proporcional */
+  border-radius: 28px;
+  border: none;
+}
+
+
+/* ===== SERVIÇOS ===== */
+#servicos {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #111;
+}
+
+#servicos h2 {
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #d3f800; /* fallback */
+  color: lab(84.02% -14.21 83.84); /* cor dinâmica */
+  margin-bottom: 1rem;
+}
+
+#servicos p {
+  margin-bottom: 3rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servico {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.servico img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 15px;
+}
+
+.servico span {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #d3f800; /* fallback */
+  color: lab(84.02% -14.21 83.84); /* cor dinâmica */
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.servico:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== FORMULÁRIO ===== */
+body.page-interna {
+  padding-top: 100px;
+}
+
+#formulario {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: #000;
+  text-align: center;
+}
+
+#titulo_formulario {
+  color: #d3f800;
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+#titulo_formulario .linha2 {
+  color: #fff;
+  display: block;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background: #111;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+input:focus {
+  box-shadow: 0 0 8px #d3f800;
+}
+
+button {
+  background: #d3f800;
+  color: #000;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.4);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 2px solid #333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-nome {
+  font-family: 'Eaglesport', 'Anton', sans-serif;
+  font-size: 1.3rem;
+  color: lab(84.02% -14.21 83.84); /* mantém o amarelo especial */
+}
+
+.footer-cnpj {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer-dev {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-dev span {
+  font-weight: bold;
+  color: lab(84.02% -14.21 83.84);
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .main-nav a,
+  .btn-matricule {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+  .sobre .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  #video_sobre iframe {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #logo {
+    width: 120px;
+  }
+  .main-nav {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .main-nav a,
+  .btn-matricule {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .form-container {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-nav {
+    gap: 0.3rem;
+  }
+  .main-nav a,
+  .btn-matricule {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    max-width: 1920px;
+  }
+  .hero h1 {
+    font-size: 6rem;
+  }
+  .hero p {
+    font-size: 1.6rem;
+  }
+  .main-nav a,
+  .btn-matricule {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  #video_sobre iframe {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    max-width: 2560px;
+  }
+  .hero h1 {
+    font-size: 7rem;
+  }
+  .hero p {
+    font-size: 2rem;
+  }
+  .main-nav a,
+  .btn-matricule {
+    font-size: 1.4rem;
+    padding: 1.2rem 2.5rem;
+  }
+  #video_sobre iframe {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Academia</title>
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- ===== HERO COM MENU SUPERIOR ===== -->
+    <header class="hero" style="background-image: url('./assets/fundo-superior.jpg');">
+    <div class="overlay"></div>
+
+    <!-- Barra de navegação -->
+    <div class="navbar">
+        <!-- Logo no canto esquerdo -->
+        <img src="./assets/logo.png" id="logo" alt="Logo Gold Academia">
+
+        <!-- Menu central/direito -->
+        <nav class="main-nav">
+        <a href="#inicio">Início</a>
+        <a href="#dietas">Dietas</a>
+        <a href="#treinos">Treinos</a>
+        <a href="#professores">Professores</a>
+        <a href="#contato">Contato</a>
+        </nav>
+
+        <!-- Botão Matricule-se à direita -->
+        <a href="./pages/formulario.html" class="btn-matricule">Matricule-se</a>
+    </div>
+
+    <!-- Conteúdo central -->
+    <div class="hero-content">
+        <h1>SEJA SEU MELHOR</h1>
+        <p>A mudança começa quando o desejo de permanecer o mesmo é superado</p>
+    </div>
+    </header>
+
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre_a_empresa" class="sobre">
+    <div class="container">
+      <div id="tx-sobre">
+        <h2>SOBRE A<br>ACADEMIA</h2>
+        <p>
+          GOLD foi fundada em 2001, com objetivo de acabar com as desculpas para não treinar.<br>
+          Através deste sonho, surgiram as principais unidades, sendo elas em Chapecó (SC).<br>
+          Obstinados e movidos pela paixão de tornar sua vida mais saudável, este sonho se tornou realidade.<br>
+          Hoje contamos com mais de 140 unidades espalhadas por todo o Brasil.
+        </p>
+      </div>
+      <div id="video_sobre">
+        <iframe src="iframe-face/iframe.html"></iframe>
+      </div>
+
+    
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section id="servicos">
+    <h2>O QUE OFERECEMOS</h2>
+    <p>Estamos empenhados em trazer a melhor experiência e treino</p>
+
+    <div class="servicos-grid">
+      <div class="servico">
+        <img src="./assets/luta2.jpeg" alt="Artes Marciais">
+        <span>Artes Marciais</span>
+      </div>
+      <div class="servico">
+        <img src="./assets/musculacao2.webp" alt="Musculação">
+        <span>Musculação</span>
+      </div>
+      <div class="servico">
+        <img src="./assets/personal2.jpg" alt="Personal Trainer">
+        <span>Personal Trainer</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/index.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const videoSection = document.querySelector("#video_sobre iframe");
+
+    if (videoSection) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // troca autoplay=0 por autoplay=1
+            let src = videoSection.getAttribute("src");
+            if (src.includes("autoplay=0")) {
+              videoSection.setAttribute("src", src.replace("autoplay=0", "autoplay=1"));
+            }
+          }
+        });
+      }, { threshold: 0.5 }); // ativa quando 50% visível
+
+      observer.observe(videoSection);
+    }
+  });
+</script>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-container">
+    <p class="footer-nome">Gold - Academia</p>
+    <p class="footer-cnpj">CNPJ: 36.120.460/0001-09</p>
+    <p class="footer-dev">Desenvolvido por: <span>J. Antonio Diniz FH</span></p>
+  </div>
+</footer>
+
+
+</body>
+</html>
